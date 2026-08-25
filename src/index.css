@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #28322c;
+  background: #f7f3ec;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; }
+.font-serif { font-family: 'Playfair Display', serif; }
+
+.eyebrow {
+  color: #dc765d;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  letter-spacing: -.06em;
+  line-height: .93;
+}
+.section-title em { font-weight: 400; color: #708274; }
+.form-input {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  border: 0;
+  border-bottom: 1px solid rgba(255,255,255,.25);
+  background: transparent;
+  padding: 10px 0 13px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: #fff;
+  outline: none;
+  transition: border-color .2s;
+}
+.form-input::placeholder { color: rgba(255,255,255,.38); }
+.form-input:focus { border-color: #e6cbb4; }
+.footer-label { color: #dc765d; font-size: 10px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-25%); } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
